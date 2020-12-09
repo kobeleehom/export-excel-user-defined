@@ -6,7 +6,6 @@ import com.dongxie.mp.demo.service.IUserService;
 import com.dongxie.mp.demo.entity.UserEntity;
 import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
-import com.dongxie.mp.generator.base.BaseController;
 
 /**
  *  接口 <br>

@@ -25,20 +25,6 @@
 
 	<dependencies>
 
-		<!-- mysql驱动依赖  不加版本号会获取最新的 -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.13</version>
-		</dependency>
-
-        <!-- mybatisPlus的依赖 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.0.6</version>
-        </dependency>
-
         <!-- lombok的依赖 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -46,12 +32,31 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- 丰富的工具类 如StringUtils -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang4</artifactId>
-            <version>4.0.1</version>
-        </dependency>
+		<!-- mybatisPlus的依赖 -->
+<!--		<dependency>-->
+<!--			<groupId>com.baomidou</groupId>-->
+<!--			<artifactId>mybatis-plus-boot-starter</artifactId>-->
+<!--			<version>3.1.1</version>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>com.xiaoleilu</groupId>
+			<artifactId>hutool-core</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>easyexcel</artifactId>
+			<version>2.2.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.75</version>
+		</dependency>
+
 
 	</dependencies>
 
