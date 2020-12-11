@@ -1,7 +1,11 @@
 spring:
   datasource:
-  # mysql数据库接地址
-    url: jdbc:mysql://127.0.0.1:3306/sys_user?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
-    username: root
-    password: root
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: org.sqlite.JDBC
+    # 引用项目中的文件
+    url: jdbc:sqlite::resource:sqlite/sql
+    username:
+    password:
+
+# Mybatis配置
+mybatis:
+  mapperLocations: classpath:mappers/*.xml

@@ -1,5 +1,7 @@
 package com.dongxie.mp.demo.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.dongxie.mp.demo.entity.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -8,10 +10,10 @@ import org.apache.ibatis.annotations.Mapper;
  * @author dong.xie <br>
  * @version 1.0 <br>
  * @taskId <br>
- * @CreateDate 2020-02-20 <br>
+ * @CreateDate 2020-12-11 <br>
  * @see com.dongxie.mp.demo.mapper <br>
  */
 @Mapper
-public interface UserMapper extends BaseMapper<Pojo> {
+public interface UserMapper extends BaseMapper<UserEntity> {
 
 }

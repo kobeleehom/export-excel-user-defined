@@ -2,6 +2,7 @@ package com.dongxie.mp.demo.service.impl;
 
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.write.metadata.WriteSheet;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.dongxie.export.excel.domain.ExportColumnDomain;
 import com.dongxie.export.excel.util.ExportExcelUtil;
 import com.dongxie.mp.demo.entity.UserEntity;
@@ -23,12 +24,12 @@ import java.util.stream.Collectors;
  * @author dong.xie <br>
  * @version 1.0 <br>
  * @taskId <br>
- * @CreateDate 2020-02-20 <br>
+ * @CreateDate 2020-12-11 <br>
  * @see com.dongxie.mp.demo.service.impl <br>
  */
 @Slf4j
 @Service
-public class UserServiceImpl implements IUserService{
+public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> implements IUserService{
 
     @Autowired
     private UserMapper mapper;

@@ -36,12 +36,6 @@
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.1.10</version>
 		</dependency>
-		<!-- mysql驱动依赖  不加版本号会获取最新的 -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.13</version>
-		</dependency>
 
         <!-- mybatisPlus的依赖 -->
         <dependency>
@@ -50,7 +44,20 @@
             <version>3.1.1</version>
         </dependency>
 
-        <!-- lombok的依赖 -->
+		<!-- druid 驱动 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.9</version>
+		</dependency>
+		<!-- sqlite3驱动包 -->
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.27.2.1</version>
+		</dependency>
+
+		<!-- lombok的依赖 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
