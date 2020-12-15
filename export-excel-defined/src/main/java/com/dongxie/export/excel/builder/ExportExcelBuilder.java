@@ -11,7 +11,9 @@ import com.xiaoleilu.hutool.util.StrUtil;
 import javax.validation.constraints.NotNull;
 import java.io.OutputStream;
 import java.util.*;
-
+/**
+ * @Author: dong.xie
+ */
 public final class ExportExcelBuilder {
 
     /**
@@ -21,7 +23,7 @@ public final class ExportExcelBuilder {
      * @param uniqueColumnCode 唯一识别列标识
      * @return EasyExcel 的 ExcelWriter 对象
      */
-    public ExcelWriter buildWriter(OutputStream outputStream, List<ExportColumnDomain> columns, String uniqueColumnCode) {
+    public ExcelWriter buildWriter(OutputStream outputStream, List<ExportColumnDomain> columns, String uniqueColumnCode, long maxRow) {
         // 得到需要合并的 列 序号
         Set<Integer> mergeColumeIndex = new HashSet<>();
         // 找到唯一标识记录的下标(默认找订单号没有则取 0 )
@@ -37,7 +39,7 @@ public final class ExportExcelBuilder {
                 // 设置表头
                 .head(headList)
                 // 设置合并单元格策略
-                .registerWriteHandler(new MergeStrategy(10, mergeColumeIndex, uniqueIndex))
+                .registerWriteHandler(new MergeStrategy(maxRow, mergeColumeIndex, uniqueIndex))
                 .build();
     }
 

@@ -1,7 +1,11 @@
 package com.dongxie.export.excel.domain;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 import lombok.experimental.Accessors;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @version: V1.0
@@ -52,4 +56,15 @@ public class ExportColumnDomain {
      * 字段翻译映射对象，不需要翻译的为空即可，需要翻译的按键值对的形势传入json",
      */
     private String valueMapping;
+
+    public static List<ExportColumnDomain> mockColumns(){
+        List<ExportColumnDomain> columns = new ArrayList<>();
+        columns.add(new ExportColumnDomain().setColumnCode("name").setColumnName("姓名").setRequire(true).setNeedMerge(false));
+        columns.add(new ExportColumnDomain().setColumnCode("age").setColumnName("年龄").setNeedMerge(true));
+        JSONObject genderMapping = new JSONObject();
+        genderMapping.put("0","女");
+        genderMapping.put("1","男");
+        columns.add(new ExportColumnDomain().setColumnCode("gender").setColumnName("性别").setNeedMerge(true).setValueMapping(genderMapping.toJSONString()));
+        return columns;
+    }
 }

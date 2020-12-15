@@ -1,7 +1,18 @@
+### 导出
+GET http://localhost:8080/user/export?size=400&maxAge=30
+Accept: application/vnd.ms-excel
+
+### 初始化数据
+POST http://localhost:8080/user/init
+Content-Type: application/json
+
+{}
+
+### 查询所有的列表
 GET http://localhost:8080/user/
 Accept: application/json
 
-###
+### 新增一个用户
 POST http://localhost:8080/user/
 Content-Type: application/json
 

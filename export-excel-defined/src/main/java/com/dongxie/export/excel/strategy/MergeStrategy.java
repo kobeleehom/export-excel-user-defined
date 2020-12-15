@@ -28,7 +28,7 @@ public class MergeStrategy extends AbstractMergeStrategy {
     /**
      * 数据集大小，用于区别结束行位置
      */
-    private Integer maxRow = 0;
+    private Long maxRow = 0L;
 
     /**
      * 导出唯一识别列id
@@ -41,7 +41,7 @@ public class MergeStrategy extends AbstractMergeStrategy {
     private MergeStrategy() {
     }
 
-    public MergeStrategy(Integer maxRow, Set<Integer> mergeCellIndex, Integer uniqueIndex) {
+    public MergeStrategy(long maxRow, Set<Integer> mergeCellIndex, Integer uniqueIndex) {
         this.mergeCellIndex = mergeCellIndex;
         this.maxRow = maxRow;
         this.uniqueIndex = uniqueIndex;
@@ -84,7 +84,7 @@ public class MergeStrategy extends AbstractMergeStrategy {
             // 合并行 + 1
             mergeRange.endRow += 1;
             // 结束的位置触发下最后一次没完成的合并
-            if (relativeRowIndex.equals(maxRow - 1)) {
+            if (relativeRowIndex.equals(Long.valueOf(maxRow).intValue() - 1)) {
                 MergeRange lastMergeRange = lastRow.get(currentCellIndex);
                 // 同行同列不能合并，会抛异常
                 if (lastMergeRange.startRow != lastMergeRange.endRow || lastMergeRange.startCell != lastMergeRange.endCell) {

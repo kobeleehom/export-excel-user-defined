@@ -2,7 +2,11 @@ package com.dongxie.mp.demo.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.dongxie.mp.demo.dto.QueryDto;
 import com.dongxie.mp.demo.entity.UserEntity;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  *  业务逻辑的接口类 <br>
@@ -15,4 +19,7 @@ import com.dongxie.mp.demo.entity.UserEntity;
  */
 public interface IUserService extends IService<UserEntity> {
 
+    void export(HttpServletResponse response, QueryDto queryDto) throws Exception;
+
+    Boolean init();
 }

@@ -11,6 +11,7 @@ import com.dongxie.export.excel.strategy.AutoWidthStrategy;
 import com.dongxie.export.excel.strategy.MergeStrategy;
 import com.xiaoleilu.hutool.date.DatePattern;
 import com.xiaoleilu.hutool.util.StrUtil;
+import org.apache.poi.ss.formula.functions.T;
 
 import javax.validation.constraints.NotNull;
 import java.io.FileNotFoundException;
@@ -31,8 +32,8 @@ public final class ExportExcelUtil {
      * @param uniqueColumnCode 唯一识别列标识
      * @return EasyExcel 的 ExcelWriter 对象
      */
-    public static ExcelWriter getWriter(OutputStream outputStream, List<ExportColumnDomain> columns, String uniqueColumnCode) {
-        return new ExportExcelBuilder().buildWriter(outputStream, columns, uniqueColumnCode);
+    public static ExcelWriter getWriter(OutputStream outputStream, List<ExportColumnDomain> columns, String uniqueColumnCode, long maxRow) {
+        return new ExportExcelBuilder().buildWriter(outputStream, columns, uniqueColumnCode, maxRow);
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ExportExcelUtil {
      * @param columns 导出列配置集合
      * @return 转换后的集合数据
      */
-    private static List<List<String>> exportListParser(List<Object> exportList, List<ExportColumnDomain> columns) {
+    public static <T> List<List<String>> exportListParser(List<T> exportList, List<ExportColumnDomain> columns) {
         // 每一条记录就是一行excel 也就是一个list
         return exportList.stream().map(exportItem -> {
             JSONObject jsonObject = JSON.parseObject(JSON.toJSONStringWithDateFormat(exportItem, DatePattern.NORM_DATETIME_MS_PATTERN));
