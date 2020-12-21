@@ -7,15 +7,15 @@
 	<parent>
 		<groupId>com.dongxie</groupId>
 		<artifactId>export-excel-user-defined</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+		<version>1.0.0</version>
 	</parent>
 
 	<!-- 本模块描述 -->
 	<artifactId>export-excel-defined</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>export-excel-defined</name>
 	<description>export-excel-defined entry</description>
+	<packaging>jar</packaging>
 
 	<properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -56,8 +56,6 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.75</version>
 		</dependency>
-
-
 	</dependencies>
 
 </project>

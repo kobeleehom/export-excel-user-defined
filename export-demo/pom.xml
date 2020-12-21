@@ -7,15 +7,15 @@
 	<parent>
 		<groupId>com.dongxie</groupId>
 		<artifactId>export-excel-user-defined</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+		<version>1.0.0</version>
 	</parent>
 
 	<!-- 本模块描述 -->
 	<artifactId>export-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>export-demo</name>
 	<description>export demo</description>
+	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>com.dongxie</groupId>
             <artifactId>export-excel-defined</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
 
 		<!-- druid依赖 -->
@@ -64,14 +64,4 @@
             <optional>true</optional>
         </dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
 </project>
