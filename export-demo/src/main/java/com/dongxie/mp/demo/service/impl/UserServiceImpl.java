@@ -65,18 +65,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity> impleme
             log.warn("Export failed! Can not find export column config, please check!");
             return;
         }
-        IPage<UserEntity> pageData = this.queryExportPage(queryDto);
-        this.assertExportData(pageData.getTotal());
 
-//        String outPath = "C:\\Users\\Administrator\\Desktop\\test.xlsx";
-//        ExcelWriter excelWriter = ExportExcelUtil.getWriter(new FileOutputStream(outPath), columns, "age", pageData.getTotal());
-
-        ExcelWriter excelWriter = ExportExcelUtil.getWriter(response.getOutputStream(), columns, "age", pageData.getTotal());
-        WriteSheet writeSheet = ExportExcelUtil.getSheet("导出测试");
-        // 分页查询数据并写入excel
-        this.selectPageDataWriteExcel(queryDto, pageData, columns, excelWriter, writeSheet);
-
-        ExportExcelUtil.finish(excelWriter);
+        this.doExport(response.getOutputStream(), queryDto, columns, "age", "用户信息");
     }
 
     @Override
