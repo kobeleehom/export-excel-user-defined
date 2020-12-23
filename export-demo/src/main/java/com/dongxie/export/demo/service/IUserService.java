@@ -1,12 +1,11 @@
-package com.dongxie.mp.demo.service;
+package com.dongxie.export.demo.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.dongxie.mp.demo.dto.QueryDto;
-import com.dongxie.mp.demo.entity.UserEntity;
+import com.dongxie.export.demo.dto.QueryDto;
+import com.dongxie.export.demo.entity.UserEntity;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 /**
  *  业务逻辑的接口类 <br>

@@ -5,7 +5,7 @@
 
 	<!-- 继承父项目 -->
 	<parent>
-		<groupId>com.dongxie</groupId>
+		<groupId>com.gitee.jdzpp</groupId>
 		<artifactId>export-excel-user-defined</artifactId>
 		<version>1.0.0</version>
 	</parent>

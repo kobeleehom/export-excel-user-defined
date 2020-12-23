@@ -1,9 +1,9 @@
-package com.dongxie.mp.demo.controller;
+package com.dongxie.export.demo.controller;
 
 import com.alibaba.excel.support.ExcelTypeEnum;
-import com.dongxie.mp.demo.dto.QueryDto;
-import com.dongxie.mp.demo.entity.UserEntity;
-import com.dongxie.mp.demo.service.IUserService;
+import com.dongxie.export.demo.dto.QueryDto;
+import com.dongxie.export.demo.entity.UserEntity;
+import com.dongxie.export.demo.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.List;
 

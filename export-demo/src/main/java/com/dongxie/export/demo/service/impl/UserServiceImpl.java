@@ -1,7 +1,5 @@
-package com.dongxie.mp.demo.service.impl;
+package com.dongxie.export.demo.service.impl;
 
-import com.alibaba.excel.ExcelWriter;
-import com.alibaba.excel.write.metadata.WriteSheet;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -9,18 +7,16 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.dongxie.export.excel.domain.ExportColumnDomain;
 import com.dongxie.export.excel.service.IExportService;
-import com.dongxie.export.excel.util.ExportExcelUtil;
-import com.dongxie.mp.demo.dto.QueryDto;
-import com.dongxie.mp.demo.entity.UserEntity;
-import com.dongxie.mp.demo.mapper.UserMapper;
-import com.dongxie.mp.demo.service.IUserService;
+import com.dongxie.export.demo.dto.QueryDto;
+import com.dongxie.export.demo.entity.UserEntity;
+import com.dongxie.export.demo.mapper.UserMapper;
+import com.dongxie.export.demo.service.IUserService;
 import com.xiaoleilu.hutool.collection.CollectionUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

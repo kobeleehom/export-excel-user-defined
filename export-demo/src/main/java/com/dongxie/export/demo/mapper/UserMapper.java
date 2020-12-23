@@ -1,7 +1,7 @@
-package com.dongxie.mp.demo.mapper;
+package com.dongxie.export.demo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.dongxie.mp.demo.entity.UserEntity;
+import com.dongxie.export.demo.entity.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

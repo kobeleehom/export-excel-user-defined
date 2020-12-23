@@ -1,4 +1,4 @@
-package com.dongxie.mp.demo.entity;
+package com.dongxie.export.demo.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;

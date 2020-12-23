@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.dongxie</groupId>
+	<groupId>com.gitee.jdzpp</groupId>
 	<artifactId>export-excel-user-defined</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
